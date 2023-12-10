@@ -1,0 +1,10 @@
+:host {
+  height: calc(100vh - 4rem);
+}
+
+#add-to-favourite {
+  cursor: pointer;
+  align-self: center;
+  bottom: -1.5rem;
+  border-radius: 9999px;
+}

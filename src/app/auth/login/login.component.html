@@ -1,0 +1,51 @@
+<div id="login-container" class="container d-flex justify-content-center">
+  <form
+    class="d-flex flex-column rounded-3 px-4 py-5 text-white"
+    #form="ngForm"
+    (ngSubmit)="onSubmit(form)"
+  >
+    <h3>Login</h3>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        class="form-control border-0"
+        placeholder="Email"
+        ngModel
+        required
+        email
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        class="form-control border-0"
+        placeholder="Password"
+        [minlength]="5"
+        ngModel
+        required
+      />
+    </div>
+    <button
+      id="login-submit"
+      type="submit"
+      class="btn btn-primary text-white mt-3 cursor-pointer"
+      [disabled]="form.invalid"
+    >
+      Accedi
+    </button>
+    <a
+      class="text-secondary mt-2"
+      [routerLink]="['/register']"
+      routerLinkActive="active"
+      >Sign-up</a
+    >
+  </form>
+  <div class="spot-1"></div>
+  <div class="spot-2"></div>
+</div>

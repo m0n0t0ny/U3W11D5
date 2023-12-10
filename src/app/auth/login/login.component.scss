@@ -1,0 +1,82 @@
+:host {
+  height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+form {
+  z-index: 2;
+  width: 300px;
+  gap: 1rem;
+  background-color: #7f7f7f10;
+  backdrop-filter: blur(8px);
+  // box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+form h3 {
+  text-align: center;
+}
+
+form a {
+  text-align: center;
+}
+
+#login-container {
+  position: relative;
+}
+
+.spot-1 {
+  z-index: 1;
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  filter: blur(4px);
+  background-color: cyan;
+  border-radius: 9999px;
+  animation: relax 10s linear infinite reverse;
+}
+
+@keyframes relax {
+  0% {
+    transform: rotate(360deg) translate(10px) rotate(-360deg) scale(1);
+  }
+  100% {
+    transform: rotate(720deg) translate(10px) rotate(-720deg) scale(1);
+  }
+}
+
+.spot-2 {
+  z-index: 1;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  transform: translate(-25%, -25%);
+  width: 12rem;
+  height: 12rem;
+  background-color: magenta;
+  filter: blur(4px);
+  border-radius: 9999px;
+  animation: relax-2 60s linear 0s infinite normal;
+}
+
+@keyframes relax-2 {
+  0% {
+    transform: rotate(0deg) translate(-50px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50px) rotate(-360deg);
+  }
+}
+
+#login-submit {
+  transition: all 0.25s ease-in-out;
+}
+
+#login-submit:hover {
+  box-shadow: 0 0 5px 1px white;
+}

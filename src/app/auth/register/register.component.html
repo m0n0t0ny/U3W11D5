@@ -1,0 +1,53 @@
+<div id="signin-container" class="container d-flex justify-content-center">
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()"
+    class="d-flex flex-column rounded-3 px-4 py-5 text-white"
+  >
+    <h3>Sign-in</h3>
+    <div class="form-input">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="form-input">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        aria-describedby="emailHelp"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-input">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+    </div>
+    <button
+      type="submit"
+      [disabled]="registerForm.invalid"
+      class="btn btn-primary mt-3"
+    >
+      Create Account
+    </button>
+    <a
+      class="text-secondary mt-2 text-center"
+      [routerLink]="['/login']"
+      routerLinkActive="active"
+      >Login</a
+    >
+  </form>
+
+  <div class="spot-1"></div>
+  <div class="spot-2"></div>
+</div>
